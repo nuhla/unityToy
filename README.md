@@ -8,7 +8,7 @@
 
 ## Car ToyVedio 
 
-[![](IMG/Capture.JPG)](https://youtu.be/JMWvb9eYjOw)
+[![](IMG/Capture1.gif)](https://youtu.be/JMWvb9eYjOw)
 
 
 ## Kinetic Sculpture
