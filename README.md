@@ -20,4 +20,4 @@ smooth, interesting animations. Ensure the sculpture is aesthetic and innovative
 to use colors and lights.
 Push the code to GitHub and upload a short video of your work to the classroom.
 
-[![](IMG/Capture2.JPG)](https://youtu.be/Fo8O1e7wBrI)
+[![](IMG/Capture2.gif)](https://youtu.be/Fo8O1e7wBrI)
