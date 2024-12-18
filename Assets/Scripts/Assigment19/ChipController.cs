@@ -13,7 +13,7 @@ public class ChipController : MonoBehaviour
     private float loaclPos = 0;
     private float StartPos = 0;
     private float localRotation = 0;
-    private float _amplitudeRotation = 0.1f;
+  
     // Start is called before the first frame update
     void Start()
     {

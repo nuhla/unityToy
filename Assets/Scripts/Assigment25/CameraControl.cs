@@ -1,31 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 using Unity.Mathematics;
 using UnityEngine;
-
-public class CameraControl : MonoBehaviour
+using UnityEngine.Rendering.Universal.Internal;
+namespace Assigment25
 {
-    [SerializeField]
-    private Transform book;
-    // Start is called before the first frame update
-    void Start()
+    public class CameraControl : MonoBehaviour
     {
+        [SerializeField]
+        private Transform book;
+        private bool StartRotate = true;
 
-    }
+        private bool zoomIn = false;
+        private float speed = 18;
+        private Quaternion finalRotation;
+        private float time = 77.6f;
+        float counter = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
 
-
-        Quaternion z = Quaternion.Euler(new Vector3(0, 9, 0));
-        if (transform.rotation.y > z.y)
+        // Start is called before the first frame update
+        void Start()
         {
+            finalRotation = Quaternion.Euler(new Vector3(transform.position.x, 44, transform.position.z));
 
-            transform.RotateAround(book.transform.position, Vector3.up, 20 * Time.deltaTime);
-            transform.LookAt(book.transform, Vector3.up);
+
+
         }
 
-        Debug.Log($"{transform.rotation.y} + -- + {z.y}");
+        // Update is called once per frame
+        void Update()
+        {
+            RoateCamera();
+        }
+
+
+        private void RoateCamera()
+        {
+
+
+
+            if (counter < time && StartRotate)
+            {
+                counter += Time.time / time;
+                Debug.Log(time);
+                Debug.Log(counter);
+                transform.RotateAround(book.transform.position, Vector3.down, speed * Time.deltaTime);
+                transform.LookAt(book.transform, Vector3.up);
+            }
+            else
+            {
+                StartRotate = false;
+
+
+            }
+
+        }
+
+
+
+
     }
 }

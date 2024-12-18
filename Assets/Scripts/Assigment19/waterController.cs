@@ -13,8 +13,6 @@ public class waterController : MonoBehaviour
 
 
     [SerializeField]
-    private int delay = 10;
-    [SerializeField]
     private float _amplitude = 0.006f;
 
     [SerializeField]
