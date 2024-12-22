@@ -28,7 +28,7 @@ public class ChipController : MonoBehaviour
 
     }
 
-    private async void FixedUpdate()
+    private void FixedUpdate()
     {
 
 

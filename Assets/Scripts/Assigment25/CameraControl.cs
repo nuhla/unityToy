@@ -12,10 +12,10 @@ namespace Assigment25
         private Transform book;
         private bool StartRotate = true;
 
-        private bool zoomIn = false;
+
         private float speed = 18;
         private Quaternion finalRotation;
-        private float time = 77.6f;
+        private float time = 60;
         float counter = 0;
 
 
@@ -43,8 +43,8 @@ namespace Assigment25
             if (counter < time && StartRotate)
             {
                 counter += Time.time / time;
-                Debug.Log(time);
-                Debug.Log(counter);
+
+
                 transform.RotateAround(book.transform.position, Vector3.down, speed * Time.deltaTime);
                 transform.LookAt(book.transform, Vector3.up);
             }

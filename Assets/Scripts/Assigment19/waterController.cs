@@ -34,7 +34,7 @@ public class waterController : MonoBehaviour
 
     }
 
-    private async void FixedUpdate()
+    private void FixedUpdate()
     {
         int count = 0;
         foreach (Transform yAxis in deops)
