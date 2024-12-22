@@ -21,3 +21,13 @@ to use colors and lights.
 Push the code to GitHub and upload a short video of your work to the classroom.
 
 [![](IMG/Capture2.gif)](https://youtu.be/Fo8O1e7wBrI)
+
+
+
+#### Assignment 25: Interactive Pop-Up Box with Interactive Diorama
+Create a unique Unity scene using basic Unity 3D shapes, lights, and a simple animated
+interactive pop-up box. Your scene should include a mini diorama that tells a very simple
+narrative. Use colors intentionally to express the feeling or mood you want to convey in the
+scene.
+
+[![](IMG/Assigment25.JPG)](https://youtu.be/mwO3kxo0QFw)
