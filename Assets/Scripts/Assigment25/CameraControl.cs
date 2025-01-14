@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal.Internal;
 namespace Assigment25
@@ -14,7 +15,7 @@ namespace Assigment25
 
 
         private float speed = 18;
-        private Quaternion finalRotation;
+        private bool lightOpen = false;
         private float time = 60;
         float counter = 0;
 
@@ -22,8 +23,9 @@ namespace Assigment25
         // Start is called before the first frame update
         void Start()
         {
-            finalRotation = Quaternion.Euler(new Vector3(transform.position.x, 44, transform.position.z));
-
+            //finalRotation = Quaternion.Euler(new Vector3(transform.position.x, 44, transform.position.z));
+            StartRotate = true;
+            StartCoroutine(StopForAseconds());
 
 
         }
@@ -32,10 +34,38 @@ namespace Assigment25
         void Update()
         {
             RoateCamera();
+
+
+
         }
 
 
-        private void RoateCamera()
+        private IEnumerator StopForAseconds()
+        {
+            yield return new WaitForSeconds(14);
+            float timeounter = 3.2f;
+            float countercounter = 0;
+
+            if (StartRotate)
+            {
+                yield break;
+            }
+            while (countercounter < timeounter)
+            {
+                countercounter += Time.deltaTime;
+                Debug.Log($"Counter : {countercounter}  Time : {timeounter}");
+
+
+                transform.RotateAround(book.transform.position, Vector3.down, speed * Time.deltaTime);
+                transform.LookAt(book.transform, Vector3.up);
+                yield return null;
+            }
+
+
+            StartRotate = false;
+        }
+
+        private async void RoateCamera()
         {
 
 
@@ -51,9 +81,11 @@ namespace Assigment25
             else
             {
                 StartRotate = false;
+                lightOpen = true;
 
 
             }
+
 
         }
 

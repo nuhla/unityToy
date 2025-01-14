@@ -27,6 +27,8 @@ namespace Assigment25
 
         private float AngleIncrease = 0;
 
+        private bool Open = true;
+
 
 
 
