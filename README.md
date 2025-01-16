@@ -44,3 +44,8 @@ To create visually intriguing scenes by arranging basic shapes in Unity to form 
 [![](IMG/Assigment15.JPG)](https://youtu.be/zzR9HRWAqZI)
 
 
+## Assignment 37: Build a Simple Rigidbody Character in Unity
+
+[![](IMG/Assigment37.JPG)](https://youtu.be/E27Byi7zRUA)
+
+Simple Rigidbody Character in Unity
